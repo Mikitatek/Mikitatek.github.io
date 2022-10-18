@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;800&display=swap");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: auto;
+  max-width: 800px;
+  background-color: rgb(183, 196, 207);
+  background: url(https://wallpaperaccess.com/full/1152730.jpg);
+  font-family: "Nanum Myeongjo", serif;
+  background-size: cover;
+}
+
+#title {
+  text-align: center;
+  color: #2d2d2d;
+}
+
+#main {
+  display: block;
+  align-content: center;
+  background-color: #dadada;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+#img-div {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #858585;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+#image {
+  display: block;
+  max-width: 100%;
+}
+
+#img-caption {
+  font-style: italic;
+  text-align: center;
+  margin-top: -20px;
+}
+
+#tribute-info {
+  color: #2d2d2d;
+}
+
+#tribute-link {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+#warden-div {
+  float: right;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#warden-img {
+  border-radius: 5px;
+  margin-top: -20px;
+  float: right;
+  width: 350px;
+  height: 200px;
+}
+
+h3 {
+  margin-top: 50px;
+}

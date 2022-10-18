@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Technical Documentation Page</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header id="doc-title">CSS Documentation</header>
+      <a class="nav-link" href="#Introduction">Introduction</a>
+      <a class="nav-link" href="#Syntax">Syntax</a>
+      <a class="nav-link" href="#Selector">Selector</a>
+      <a class="nav-link" href="#Declaration_Block">Declaration Block</a>
+      <a class="nav-link" href="#Length_Units">Length Units</a>
+      <a class="nav-link" href="#Use">Use</a>
+      <a class="nav-link" href="#Sources">Sources</a>
+      <a class="nav-link" href="#Specificity">Specificity</a>
+      <a class="nav-link" href="#Inheritance">Inheritance</a>
+      <a class="nav-link" href="#Whitespace">Whitespace</a>
+      <a class="nav-link" href="#Positioning">Positioning</a>
+      <a class="nav-link" href="#Reference">Reference</a>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>
+          Cascading Style Sheets is a style sheet language used for describing
+          the presentation of a document written in a markup language such as
+          HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS
+          is a cornerstone technology of the World Wide Web, alongside HTML and
+          JavaScript.
+        </p>
+        <p>
+          CSS is designed to enable the separation of presentation and content,
+          including layout, colors, and fonts. This separation can improve
+          content accessibility; provide more flexibility and control in the
+          specification of presentation characteristics; enable multiple web
+          pages to share formatting by specifying the relevant CSS in a separate
+          .css file, which reduces complexity and repetition in the structural
+          content; and enable the .css file to be cached to improve the page
+          load speed between the pages that share the file and its formatting.
+        </p>
+        <p>
+          Separation of formatting and content also makes it feasible to present
+          the same markup page in different styles for different rendering
+          methods, such as on-screen, in print, by voice (via speech-based
+          browser or screen reader), and on Braille-based tactile devices. CSS
+          also has rules for alternate formatting if the content is accessed on
+          a mobile device.
+        </p>
+        <p>
+          The name cascading comes from the specified priority scheme to
+          determine which style rule applies if more than one rule matches a
+          particular element. This cascading priority scheme is predictable.
+        </p>
+        <p>
+          The CSS specifications are maintained by the World Wide Web Consortium
+          (W3C). Internet media type (MIME type) text/css is registered for use
+          with CSS by RFC 2318 (March 1998). The W3C operates a free CSS
+          validation service for CSS documents.
+        </p>
+        <p>
+          In addition to HTML, other markup languages support the use of CSS
+          including XHTML, plain XML, SVG, and XUL.
+        </p>
+      </section>
+      <section class="main-section" id="Syntax">
+        <header>Syntax</header>
+        <p>
+          CSS has a simple syntax and uses a number of English keywords to
+          specify the names of various style properties.<br />
+          A style sheet consists of a list of rules. Each rule or rule-set
+          consists of one or more selectors, and a declaration block.
+        </p>
+      </section>
+      <section class="main-section" id="Selector">
+        <header>Selector</header>
+        <p>
+          In CSS, selectors declare which part of the markup a style applies to
+          by matching tags and attributes in the markup itself.<br /><br />
+
+          Selectors may apply to the following:<br /><br />
+        </p>
+        <ul>
+          <li>elements of a specific type, e.g. the second-level headers h2</li>
+          <li>
+            elements specified by attribute, in particular:
+            <ul>
+              <li>
+                id: an identifier unique within the document, denoted in the
+                selector language by a hash prefix e.g. #id
+              </li>
+              <li>
+                class: an identifier that can annotate multiple elements in a
+                document, denoted by a dot prefix e.g. .classname (the phrase
+                "CSS class", although sometimes used, is a misnomer, as element
+                classes—specified with the HTML class attribute—is a markup
+                feature that is distinct from browsers' CSS subsystem and the
+                related W3C/WHATWG standards work on document styles; see RDF
+                and microformats for the origins of the "class" system of the
+                Web content model)
+              </li>
+            </ul>
+          </li>
+          <li>
+            elements depending on how they are placed relative to others in the
+            document tree.
+          </li>
+        </ul>
+        <p>
+          Classes and IDs are case-sensitive, start with letters, and can
+          include alphanumeric characters, hyphens, and underscores. A class may
+          apply to any number of instances of any elements. An ID may only be
+          applied to a single element.
+        </p>
+        <p>
+          Pseudo-classes are used in CSS selectors to permit formatting based on
+          information that is not contained in the document tree. One example of
+          a widely used pseudo-class is <code>:hover</code>, which identifies
+          content only when the user "points to" the visible element, usually by
+          holding the mouse cursor over it. It is appended to a selector as in
+          <code>a:hover</code> or <code>#elementid:hover</code>. A pseudo-class
+          classifies document elements, such as <code>:link</code> or
+          <code>:visited</code>, whereas a pseudo-element makes a selection that
+          may consist of partial elements, such as <code>::first-line</code> or
+          <code>::first-letter</code>. Note the double-colon notation for
+          pseudo-elements versus single-colon notation for pseudo-class.
+        </p>
+        <p>
+          Selectors may be combined in many ways to achieve great specificity
+          and flexibility. Multiple selectors may be joined in a spaced list to
+          specify elements by location, element type, id, class, or any
+          combination thereof. The order of the selectors is important. For
+          example, <code>div .myClass {color: red;}</code> applies to all
+          elements of class myClass that are inside div elements, whereas
+          <code>.myClass div {color: red;}</code> applies to all div elements
+          that are inside elements of class myClass. This is not to be confused
+          with concatenated identifiers such as
+          <code>div.myClass {color: red;}</code> which applies to div elements
+          of class myClass.
+        </p>
+        <p>
+          The following table provides a summary of selector syntax indicating
+          usage and the version of CSS that introduced it.
+        </p>
+        <table>
+          <tr>
+            <th>Pattern</th>
+            <th>Matches</th>
+            <th>First defined in CSS level</th>
+          </tr>
+          <tr>
+            <td><code>E</code></td>
+            <td>an element of type E</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><code>E:link</code></td>
+            <td>
+              an E element that is the source anchor of a hyperlink whose target
+              is either not yet visited (:link) or already visited (:visited)
+            </td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><code>E:active</code></td>
+            <td>an E element during certain user actions</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><code>E::first-line</code></td>
+            <td>the first formatted line of an E element</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><code>E::first-letter</code></td>
+            <td>the first formatted letter of an E element</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><code>.c</code></td>
+            <td>all elements with class="c"</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><code>#myid</code></td>
+            <td>the element with id="myid"</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><code>E.warning</code></td>
+            <td>
+              an E element whose class is "warning" (the document language
+              specifies how class is determined)
+            </td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><code>E#myid</code></td>
+            <td>an E element with ID equal to "myid"</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><code>.c#myid</code></td>
+            <td>the element with class="c" and ID equal to "myid"</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><code>E F</code></td>
+            <td>an F element descendant of an E element</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><code>*</code></td>
+            <td>any element</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><code>E[foo]</code></td>
+            <td>an E element with a "foo" attribute</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><code>E[foo="bar"]</code></td>
+            <td>
+              an E element whose "foo" attribute value is exactly equal to "bar"
+            </td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><code>E[foo~="bar"]</code></td>
+            <td>
+              an E element whose "foo" attribute value is a list of
+              whitespace-separated values, one of which is exactly equal to
+              "bar"
+            </td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><code>E[foo|="en"]</code></td>
+            <td>
+              an E element whose "foo" attribute has a hyphen-separated list of
+              values beginning (from the left) with "en"
+            </td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><code>E:first-child</code></td>
+            <td>an E element, first child of its parent</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><code>E:lang(fr)</code></td>
+            <td>
+              an element of type E in language "fr" (the document language
+              specifies how language is determined)
+            </td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><code>E::before</code></td>
+            <td>generated content before an E element's content</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><code>E::after</code></td>
+            <td>generated content after an E element's content</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><code>E > F</code></td>
+            <td>an F element child of an E element</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><code>E + F</code></td>
+            <td>an F element immediately preceded by an E element</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><code>E[foo^="bar"]</code></td>
+            <td>
+              an E element whose "foo" attribute value begins exactly with the
+              string "bar"
+            </td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E[foo$="bar"]</code></td>
+            <td>
+              an E element whose "foo" attribute value ends exactly with the
+              string "bar"
+            </td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E[foo*="bar"]</code></td>
+            <td>
+              an E element whose "foo" attribute value contains the substring
+              "bar"
+            </td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:root</code></td>
+            <td>an E element, root of the document</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:nth-child(n)</code></td>
+            <td>an E element, the n-th child of its parent</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:nth-last-child(n)</code></td>
+            <td>
+              an E element, the n-th child of its parent, counting from the last
+              one
+            </td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:nth-of-type(n)</code></td>
+            <td>an E element, the n-th sibling of its type</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:nth-last-of-type(n)</code></td>
+            <td>
+              an E element, the n-th sibling of its type, counting from the last
+              one
+            </td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:last-child</code></td>
+            <td>an E element, last child of its parent</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:first-of-type</code></td>
+            <td>an E element, first sibling of its type</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:last-of-type</code></td>
+            <td>an E element, last sibling of its type</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:only-child</code></td>
+            <td>an E element, only child of its parent</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:only-of-type</code></td>
+            <td>an E element, only sibling of its type</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:empty</code></td>
+            <td>an E element that has no children (including text nodes)</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:target</code></td>
+            <td>an E element being the target of the referring URI</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:enabled</code></td>
+            <td>a user interface element E that is enabled</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:disabled</code></td>
+            <td>a user interface element E that is disabled</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:checked</code></td>
+            <td>
+              a user interface element E that is checked (for instance a
+              radio-button or checkbox)
+            </td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E:not(s)</code></td>
+            <td>an E element that does not match simple selector s</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><code>E ~ F</code></td>
+            <td>an F element preceded by an E element</td>
+            <td>3</td>
+          </tr>
+        </table>
+      </section>
+      <section class="main-section" id="Declaration_Block">
+        <header>Declaration block</header>
+        <p>
+          A declaration block consists of a list of declarations in braces. Each
+          declaration itself consists of a property, a colon <code>(:)</code>,
+          and a value. If there are multiple declarations in a block, a
+          semi-colon <code>(;)</code> must be inserted to separate each
+          declaration. An optional semi-colon after the last (or single)
+          declaration may be used.
+        </p>
+        <p>
+          Properties are specified in the CSS standard. Each property has a set
+          of possible values. Some properties can affect any type of element,
+          and others apply only to particular groups of elements.
+        </p>
+        <p>
+          Values may be keywords, such as "center" or "inherit", or numerical
+          values, such as <code>200px</code> (200 pixels), <code>50vw</code> (50
+          percent of the viewport width) or <code>80%</code> (80 percent of the
+          parent element's width). Color values can be specified with keywords
+          (e.g. "<code>red</code>"), hexadecimal values (e.g.
+          <code>#FF0000</code>, also abbreviated as <code>#F00</code>), RGB
+          values on a 0 to 255 scale (e.g. <code>rgb(255, 0, 0)</code>), RGBA
+          values that specify both color and alpha transparency (e.g.
+          <code>rgba(255, 0, 0, 0.8)</code>), or HSL or HSLA values (e.g.
+          <code>hsl(000, 100%, 50%)</code>,
+          <code>hsla(000, 100%, 50%, 80%)</code>).
+        </p>
+      </section>
+      <section class="main-section" id="Length_Units">
+        <header>Length Units</header>
+        <p>
+          Non-zero numeric values representing linear measures must include a
+          length unit, which is either an alphabetic code or abbreviation, as in
+          <code>200px</code> or <code>50vw</code>; or a percentage sign, as in
+          <code>80%</code>. Some units - <code>cm</code> (centimetre);
+          <code>in</code> (inch); <code>mm</code> (millimetre);
+          <code>pc</code> (pica); and <code>pt</code> (point) - are absolute,
+          which means that the rendered dimension does not depend upon the
+          structure of the page; others - <code>em</code> (em);
+          <code>ex</code> (ex) and <code>px</code> (pixel)[clarification needed]
+          - are relative, which means that factors such as the font size of a
+          parent element can affect the rendered measurement. These eight units
+          were a feature of CSS 1 and retained in all subsequent revisions. The
+          proposed CSS Values and Units Module Level 3 will, if adopted as a W3C
+          Recommendation, provide seven further length units: <code>ch</code>;
+          <code>Q</code>; <code>rem</code>; <code>vh</code>; <code>vmax</code>;
+          <code>vmin</code>; and <code>vw</code>.
+        </p>
+      </section>
+      <section class="main-section" id="Use">
+        <header>Use</header>
+        <p>
+          Before CSS, nearly all presentational attributes of HTML documents
+          were contained within the HTML markup. All font colors, background
+          styles, element alignments, borders and sizes had to be explicitly
+          described, often repeatedly, within the HTML. CSS lets authors move
+          much of that information to another file, the style sheet, resulting
+          in considerably simpler HTML.
+        </p>
+        <p>
+          For example, headings (h1 elements), sub-headings (h2),
+          sub-sub-headings (h3), etc., are defined structurally using HTML. In
+          print and on the screen, choice of font, size, color and emphasis for
+          these elements is presentational.
+        </p>
+        <p>
+          Before CSS, document authors who wanted to assign such typographic
+          characteristics to, say, all h2 headings had to repeat HTML
+          presentational markup for each occurrence of that heading type. This
+          made documents more complex, larger, and more error-prone and
+          difficult to maintain. CSS allows the separation of presentation from
+          structure. CSS can define color, font, text alignment, size, borders,
+          spacing, layout and many other typographic characteristics, and can do
+          so independently for on-screen and printed views. CSS also defines
+          non-visual styles, such as reading speed and emphasis for aural text
+          readers. The W3C has now deprecated the use of all presentational HTML
+          markup.
+        </p>
+        <p>
+          For example, under pre-CSS HTML, a heading element defined with red
+          text would be written as:
+        </p>
+        <pre><code>
+&#x3C;h1&#x3E;&#x3C;font color=&#x22;red&#x22;&#x3E;Chapter 1.&#x3C;/font&#x3E;&#x3C;/h1&#x3E;
+          </code></pre>
+        <p>
+          Using CSS, the same element can be coded using style properties
+          instead of HTML presentational attributes:
+        </p>
+        <pre><code>
+&#x3C;h1 style=&#x22;color: red&#x22;&#x3E;Chapter 1.&#x3C;/h1&#x3E;
+          </code></pre>
+        <p>
+          The advantages of this may not be immediately clear but the power of
+          CSS becomes more apparent when the style properties are placed in an
+          internal style element or, even better, an external CSS file. For
+          example, suppose the document contains the style element:
+        </p>
+        <pre><code>
+&#x3C;style&#x3E;
+  h1 {
+    color: red;
+  }
+&#x3C;/style&#x3E;</code>
+        </pre>
+        <p>
+          All h1 elements in the document will then automatically become red
+          without requiring any explicit code. If the author later wanted to
+          make h1 elements blue instead, this could be done by changing the
+          style element to:
+        </p>
+        <pre><code>
+&#x3C;style&#x3E;
+  h1 {
+    color: blue;
+  }
+&#x3C;/style&#x3E;
+
+</code></pre>
+        <p>
+          rather than by laboriously going through the document and changing the
+          color for each individual h1 element.
+        </p>
+
+        <p>
+          The styles can also be placed in an external CSS file, as described
+          below, and loaded using syntax similar to:
+        </p>
+        <pre><code>
+&#x3C;link href=&#x22;path/to/file.css&#x22; rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22;/&#x3E;
+          </code></pre>
+        <p>
+          This further decouples the styling from the HTML document and makes it
+          possible to restyle multiple documents by simply editing a shared
+          external CSS file.
+        </p>
+      </section>
+      <section class="main-section" id="Sources">
+        <header>Sources</header>
+        <p>
+          CSS information can be provided from various sources. These sources
+          can be the web browser, the user, and the author. The information from
+          the author can be further classified into inline, media type,
+          importance, selector specificity, rule order, inheritance, and
+          property definition. CSS style information can be in a separate
+          document, or it can be embedded into an HTML document. Multiple style
+          sheets can be imported. Different styles can be applied depending on
+          the output device being used; for example, the screen version can be
+          quite different from the printed version, so that authors can tailor
+          the presentation appropriately for each medium.
+        </p>
+        <p>
+          The style sheet with the highest priority controls the content
+          display. Declarations not set in the highest priority source are
+          passed on to a source of lower priority, such as the user agent style.
+          The process is called cascading.
+        </p>
+        <p>
+          One of the goals of CSS is to allow users greater control over
+          presentation. Someone who finds red italic headings difficult to read
+          may apply a different style sheet. Depending on the browser and the
+          web site, a user may choose from various style sheets provided by the
+          designers, or may remove all added styles and view the site using the
+          browser's default styling, or may override just the red italic heading
+          style without altering other attributes.
+        </p>
+        <h2 class="title">CSS priority scheme (highest to lowest)</h2>
+        <table>
+          <th>Priority</th>
+          <th>CSS source type</th>
+          <th>Description</th>
+          <tr>
+            <td>1</td>
+            <td>Importance</td>
+            <td>
+              The "<code> !important </code>" annotation overwrites the previous
+              priority types
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Inline</td>
+            <td>
+              A style applied to an HTML element via HTML "style" attribute
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Media Type</td>
+            <td>
+              A property definition applies to all media types, unless a media
+              specific CSS is defined
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>User defined</td>
+            <td>
+              Most browsers have the accessibility feature: a user defined CSS
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Selector specificity</td>
+            <td>
+              A specific contextual selector (<code>#heading p</code>)
+              overwrites generic definition
+            </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Rule order</td>
+            <td>Last rule declaration has a higher priority</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Parent inheritance</td>
+            <td>
+              If a property is not specified, it is inherited from a parent
+              element
+            </td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>CSS property definition in HTML document</td>
+            <td>
+              CSS rule or CSS inline style overwrites a default browser value
+            </td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Browser default</td>
+            <td>
+              The lowest priority: browser default value is determined by W3C
+              initial value specifications
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section class="main-section" id="Specificity">
+        <header>Specificity</header>
+        <p>
+          Specificity refers to the relative weights of various rules. It
+          determines which styles apply to an element when more than one rule
+          could apply. Based on specification, a simple selector (e.g. H1) has a
+          specificity of 1, class selectors have a specificity of 1,0, and ID
+          selectors a specificity of 1,0,0. Because the specificity values do
+          not carry over as in the decimal system, commas are used to separate
+          the "digits" (a CSS rule having 11 elements and 11 classes would have
+          a specificity of 11,11, not 121).
+        </p>
+        <p>
+          Thus the following rules selectors result in the indicated
+          specificity:
+        </p>
+        <table>
+          <th>Selectors</th>
+          <th>Specificity</th>
+          <tr>
+            <td><code>h1 {color: white;}</code></td>
+            <td>0, 0, 0, 1</td>
+          </tr>
+          <tr>
+            <td><code>p em {color: green;}</code></td>
+            <td>0, 0, 0, 2</td>
+          </tr>
+          <tr>
+            <td><code>.grape {color: red;}</code></td>
+            <td>0, 0, 1, 0</td>
+          </tr>
+          <tr>
+            <td><code>p.bright {color: blue;}</code></td>
+            <td>0, 0, 1, 1</td>
+          </tr>
+          <tr>
+            <td><code>p.bright em.dark {color: yellow;}</code></td>
+            <td>0, 0, 2, 2</td>
+          </tr>
+          <tr>
+            <td><code>#id218 {color: brown;}</code></td>
+            <td>0, 1, 0, 0</td>
+          </tr>
+          <tr>
+            <td><code>style=" "</code></td>
+            <td>1, 0, 0, 0</td>
+          </tr>
+        </table>
+        <h3>Examples</h3>
+        Consider this HTML fragment:
+        <pre><code>
+&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html&#x3E;
+    &#x3C;head&#x3E;
+        &#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
+        &#x3C;style&#x3E;
+            #xyz { color: blue; }
+        &#x3C;/style&#x3E;
+    &#x3C;/head&#x3E;
+    &#x3C;body&#x3E;
+        &#x3C;p id=&#x22;xyz&#x22; style=&#x22;color: green;&#x22;&#x3E;To demonstrate specificity&#x3C;/p&#x3E;
+    &#x3C;/body&#x3E;
+&#x3C;/html&#x3E;
+          </code></pre>
+        In the above example, the declaration in the
+        <code>style</code> attribute overrides the one in the
+        <code>&#x3C;style&#x3E;</code> element because it has a higher
+        specificity, and thus, the paragraph appears green:
+        <div class="demo-box">
+          <span id="green-text-demo">To demonstrate specificity</span>
+        </div>
+      </section>
+      <section class="main-section" id="Inheritance">
+        <header>Inheritance</header>
+        <p>
+          Inheritance is a key feature in CSS; it relies on the
+          ancestor-descendant relationship to operate. Inheritance is the
+          mechanism by which properties are applied not only to a specified
+          element, but also to its descendants.[16] Inheritance relies on the
+          document tree, which is the hierarchy of XHTML elements in a page
+          based on nesting. Descendant elements may inherit CSS property values
+          from any ancestor element enclosing them. In general, descendant
+          elements inherit text-related properties, but their box-related
+          properties are not inherited. Properties that can be inherited are
+          color, font, letter-spacing, line-height, list-style, text-align,
+          text-indent, text-transform, visibility, white-space and word-spacing.
+          Properties that cannot be inherited are background, border, display,
+          float and clear, height, and width, margin, min- and max-height and
+          -width, outline, overflow, padding, position, text-decoration,
+          vertical-align and z-index.
+        </p>
+        <p>
+          Inheritance can be used to avoid declaring certain properties over and
+          over again in a style sheet, allowing for shorter CSS.
+        </p>
+        <p>
+          Inheritance in CSS is not the same as inheritance in class-based
+          programming languages, where it is possible to define class B as "like
+          class A, but with modifications". With CSS, it is possible to style an
+          element with "class A, but with modifications". However, it is not
+          possible to define a CSS class B like that, which could then be used
+          to style multiple elements without having to repeat the modifications.
+        </p>
+        <h3>Example</h3>
+        Given the following style sheet:
+        <pre><code>
+p {
+  color: pink;
+}
+        </code></pre>
+        Suppose there is a p element with an emphasizing element
+        (&#x3C;em&#x3E;) inside:
+        <pre><code>
+&#x3C;p&#x3E;
+  This is to &#x3C;em&#x3E;illustrate&#x3C;/em&#x3E;inheritance
+&#x3C;/p&#x3E;
+        </code></pre>
+        If no color is assigned to the em element, the emphasized word
+        "illustrate" inherits the color of the parent element, p. The style
+        sheet p has the color pink, hence, the em element is likewise pink:
+        <div class="demo-box">
+          <span id="pink-text-demo">This is to illustrate inheritance</span>
+        </div>
+      </section>
+      <section class="main-section" id="Whitespace">
+        <header>Whitespace</header>
+        Whitespace between properties and selectors is ignored. This code
+        snippet:
+        <pre><code>
+body{overflow:hidden;background:#000000;background-image:url(images/bg.gif);background-repeat:no-repeat;background-position:left top;}
+          </code></pre>
+        is functionally equivalent to this one:
+        <pre><code>
+body {
+  overflow: hidden;
+  background-color: #000000;
+  background-image: url(images/bg.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+          </code></pre>
+        One common way to format CSS for readability is to indent each property
+        and give it its own line. In addition to formatting CSS for readability,
+        shorthand properties can be used to write out the code faster, which
+        also gets processed more quickly when being rendered:
+        <pre><code>
+body {
+  overflow: hidden;
+  background: #000 url(images/bg.gif) no-repeat left top;
+}
+        </code></pre>
+        Sometimes, multiple property values are indented onto their own line:
+        <pre><code>
+@font-face {
+  font-family: 'Comic Sans'
+  font-size: 20px
+  src: url('first.example.com'),
+  url('second.example.com'),
+  url('third.example.com'),
+  url('fourth.example.com'),
+}
+        </code></pre>
+      </section>
+      <section class="main-section" id="Positioning">
+        <header>Positioning</header>
+        <h4>Normal flow</h4>
+        <p>
+          Inline items are laid out in the same way as the letters in words in
+          text, one after the other across the available space until there is no
+          more room, then starting a new line below. Block items stack
+          vertically, like paragraphs and like the items in a bulleted list.
+          Normal flow also includes relative positioning of block or inline
+          items, and run-in boxes.
+        </p>
+        <h4>Floats</h4>
+        <p>
+          A floated item is taken out of the normal flow and shifted to the left
+          or right as far as possible in the space available. Other content then
+          flows alongside the floated item.
+        </p>
+        <h4>Absolute positioning</h4>
+        <p>
+          An absolutely positioned item has no place in, and no effect on, the
+          normal flow of other items. It occupies its assigned position in its
+          container independently of other items.
+        </p>
+        <h4>Position property</h4>
+        <p>
+          There are five possible values of the <code>position</code> property.
+          If an item is positioned in any way other than <code>static</code>,
+          then the further properties <code>top</code>, <code>bottom</code>,
+          <code>left</code>, and <code>right</code> are used to specify offsets
+          and positions.The element having position static is not affected by
+          the <code>top</code>, <code>bottom</code> , <code>left</code> or
+          <code>right</code> properties.
+        </p>
+        <h4>Static</h4>
+        <p>The default value places the item in the normal flow</p>
+        <h4>Relative</h4>
+        <p>
+          The item is placed in the normal flow, and then shifted or offset from
+          that position. Subsequent flow items are laid out as if the item had
+          not been moved.
+        </p>
+        <h4>Absolute</h4>
+        <p>
+          Specifies absolute positioning. The element is positioned in relation
+          to its nearest non-static ancestor.
+        </p>
+        <h4>Fixed</h4>
+        <p>
+          The item is absolutely positioned in a fixed position on the screen
+          even as the rest of the document is scrolled
+        </p>
+        <h4>Float and clear</h4>
+        <p>
+          The <code>float</code> property may have one of three values.
+          Absolutely positioned or fixed items cannot be floated. Other elements
+          normally flow around floated items, unless they are prevented from
+          doing so by their <code>clear</code> property.
+        </p>
+        <h4>left</h4>
+        <p>
+          The item floats to the left of the line that it would have appeared
+          in; other items may flow around its right side.
+        </p>
+        <h4>right</h4>
+        <p>
+          The item floats to the right of the line that it would have appeared
+          in; other items may flow around its left side.
+        </p>
+        <h4>clear</h4>
+        <p>
+          Forces the element to appear underneath ('clear') floated elements to
+          the left (<code>clear:left</code>), right (<code>clear:right</code>)
+          or both sides (<code>clear:both</code>).
+        </p>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        All the documentation in this page is taken from
+        <a href="https://en.wikipedia.org/wiki/CSS">Wikipedia</a>
+      </section>
+    </main>
+  </body>
+</html>
