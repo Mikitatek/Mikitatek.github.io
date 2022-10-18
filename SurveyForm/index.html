@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">Festival Feedback Survey Form</h1>
+    <p id="description">
+      Thank you for coming at our festival! Please help us by filling a small
+      survey regarding the quality and services of the concert that occured
+      friday last week! All personal data will not be shared anywhere and survey
+      data will be kept internally. This feedback will only be used to further
+      improve our services and products.
+    </p>
+    <br />
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label" for="name"
+          >Name:
+          <input id="name" type="text" placeholder="Your name here" required
+        /></label>
+        <label id="email-label" for="email"
+          >Email:
+          <input id="email" type="email" placeholder="your@mail.com" required
+        /></label>
+        <label id="number-label" for="age"
+          >Age:
+          <input
+            id="age"
+            type="number"
+            min="18"
+            max="120"
+            placeholder="18-120"
+            required
+        /></label>
+      </fieldset>
+      <fieldset>
+        <p class="questions">Who was your favorite artist?</p>
+        <label for="djfeel"
+          ><input type="radio" name="artist" id="djfeel" class="inline" value="dj-feel" />DJ
+          Feel</label
+        >
+        <label for="littlepumpkin"
+          ><input
+            type="radio"
+            name="artist"
+            id="littlepumpkin"
+            class="inline"
+            value="little-pumpkin"
+          />Little Pumpkin</label
+        >
+        <label for="maxreventhal"
+          ><input
+            type="radio"
+            name="artist"
+            id="maxreventhal"
+            class="inline"
+            value="max-reventhal"
+          />Max Reventhal</label
+        >
+        <label for="joshuapink"
+          ><input
+            type="radio"
+            name="artist"
+            id="joshuapink"
+            class="inline"
+            value="joshua-pink"
+          />Joshua Pink</label
+        >
+        <label for="fabhudsonhornet"
+          ><input
+            type="radio"
+            name="artist"
+            id="fabhudsonhornet"
+            class="inline"
+            value="fabulous-hudson-hornet"
+          />Fabulous Hudson Hornet</label
+        >
+        <label id="improvement-label" for="dropdown"
+          ><p class="questions">
+            What do you think was the most needed improvment to the festival?
+          </p>
+          <select id="dropdown" required>
+            <option>(Select an option)</option>
+            <option>Sound System</option>
+            <option>Food Quality</option>
+            <option>Food Choices</option>
+            <option>Drink Choices</option>
+            <option>Artist Variety</option>
+            <option>Accomodation Spaces</option>
+          </select></label
+        >
+        <p class="questions">What were the most fun stages at the festival?</p>
+        <label for="mainstage"
+          ><input
+            type="checkbox"
+            id="main-stage"
+            name="favorite-stage"
+            class="inline"
+            value="main"
+          />Main stage</label
+        >
+        <label for="mainstage"
+          ><input
+            type="checkbox"
+            id="80s-stage"
+            name="favorite"
+            class="inline"
+            value="80s"
+          />80's Stage</label
+        >
+        <label for="mainstage"
+          ><input
+            type="checkbox"
+            id="hiphop-stage"
+            name="favorite-stage"
+            class="inline"
+            value="hiphop-funk"
+          />HipHop Funk Stage</label
+        >
+        <label for="mainstage"
+          ><input
+            type="checkbox"
+            id="liltree-stage"
+            name="favorite-stage"
+            class="inline"
+            value="little-tree"
+          />Little Tree Stage</label
+        >
+        <label for="mainstage"
+          ><input
+            type="checkbox"
+            id="vibeday-stage"
+            name="favorite-stage"
+            class="inline"
+            value="vibe-day"
+          />Vibe Day Stage</label
+        >
+      </fieldset>
+      <fieldset>
+        <label id="number-label" for="number"
+          ><p class="questions">What is your level of satisfaction?</p></label>
+          <input
+            id="number"
+            type="number"
+            min="0"
+            max="100"
+            placeholder="0-100"
+            required
+        /></label>
+        <label for="feedback"
+          ><p class="questions">
+            Please also if you can give us a few words regarding your experience
+            at the festival.
+          </p>
+          <textarea
+            id="feedback"
+            rows="3"
+            cols="57"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" id="submit" value="Submit" />
+    </form>
+  </body>
+</html>
