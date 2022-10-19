@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+#introduction {
+  background: linear-gradient(45deg, white, rgb(196, 196, 196));
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#projects {
+  height: 120vh;
+  width: 100vw;
+  background-color: rgb(165, 37, 37);
+}
+
+#person-pic {
+  width: 50%;
+  aspect-ratio: initial;
+  filter: grayscale(0.5);
+}
+
+#introduction h1 {
+  font-family: "Poppins", bold, sans-serif;
+  line-height: 1em;
+}
+
+#introduction h2 {
+  margin: 0 0 0 15px;
+  font-weight: 100;
+}
+
+#introduction p {
+  width: 80%;
+  margin-top: 10px;
+}
+
+#projects h1 {
+  text-align: center;
+  color: white;
+  padding-top: 100px;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80vw;
+  height: 700px;
+  margin: auto;
+}
+
+.project-item {
+  margin: 10px;
+  width: 30%;
+  height: 250px;
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.project-item:hover {
+  filter: blur(5px);
+}
+
+/* .project-img {
+  filter: blur(5px);
+  width: 50%;
+  transition: all ease-in-out 0.5s;
+  display: block;
+}
+
+.project-img:hover {
+  filter: blur(0px);
+  width: 100%;
+  transition: all ease-in-out 0.5s;
+}
+*/
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  background: url(img/landing-page.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-text {
+  z-index: 100;
+  position: absolute;
+  z-index: 2;
+}
+
+.project-name {
+  font-size: 20px;
+  color: black;
+  position: relative;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+}
