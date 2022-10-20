@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <nav>
+        <a href="#introduction">Introduction</a>
+        <a href="#about-me">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#projects">Social Media</a>
+      </nav>
+    </header>
     <main>
       <section id="introduction">
         <img src="img/me.png" alt="A picture of me" id="person-pic" />
@@ -16,35 +23,67 @@
           <h2>Michael Schneider</h2>
           <h1>
             Frontend <br />
-            Web Developer
+            Web <span class="red-text">Developer</span>
           </h1>
           <p>
-            Hello and welcome to my Portfolio! Here you can check out all of my
-            projects and social media!
+            Hello and welcome to my
+            <span class="red-text">Portfolio!</span> Here you can check out all
+            of my <span class="red-text">projects </span>and
+            <span class="red-text">social media!</span>
           </p>
         </div>
       </section>
+      <!-- ABOUT ME -->
+      <section id="about-me">
+        <div class="picture-me"></div>
+        <div class="text-container">
+          <h1>About Me</h1>
+          <p>
+            I am looking for a personal and professional development in the IT
+            field, because I have always been passionate about it. I am
+            currently an informatics student, but I also want to learn and
+            deepen my work and lifestyle. Ever since I was a child, I have liked
+            coding in little games and having fun with it, but now I'd like to
+            create and work in more professional enviroments. I've always had a
+            lot of patience and have always strived to find the most efficient
+            solutions to problems. Having played Basketball for a few years, I
+            have developed a collaborative mindset when it comes to work or
+            daily tasks. I can also work really well independently.
+          </p>
+        </div>
+      </section>
+
+      <!-- MY PROJECTS -->
       <section id="projects">
-        <h1>Projects:</h1>
+        <h1>My Projects:</h1>
         <div class="projects-container">
-          <div class="project-item">
-            <!-- <img class="project-img" src="img/landing-page.png" /> -->
-            <p class="project-name">Product Landing Page</p>
+          <div class="project-tile">
+            <a href="../Product Landing Page/index.html" target="_blank">
+              <img class="project-img" src="img/landing-page.png" />
+            </a>
+            <h2 class="project-name">Product Landing Page</h2>
           </div>
-          <div class="project-item">
-            <!-- <img class="project-img" src="img/tech-documentation.png" /> -->
-            <div class="project-img"></div>
-            <div class="project-text">
-              <h2 class="project-name">Technical Documentation</h2>
-            </div>
+          <div class="project-tile">
+            <a href="../Technical Documentation/index.html" target="_blank">
+              <img class="project-img" src="img/tech-documentation.png" />
+            </a>
+            <h2 class="project-name">Technical Documentation</h2>
           </div>
-          <div class="project-item tribute">
-            <!-- <img class="project-img" src="img/tribute.png" /> -->
+          <div class="project-tile tribute">
+            <a href="../Tribute Page/index.html" target="_blank">
+              <img class="project-img" src="img/tribute.png" />
+            </a>
             <h2 class="project-name">Tribute Page</h2>
           </div>
-          <div class="project-item survey">
-            <!-- <img class="project-img" src="img/survey.png" /> -->
+          <div class="project-tile survey">
+            <a href="../Survey Form/index.html" target="_blank">
+              <img class="project-img" src="img/survey.png" />
+            </a>
             <h2 class="project-name">Survey Page</h2>
+          </div>
+          <div class="project-tile">
+            <div class="placeholder"></div>
+            <h2 class="project-name">More coming soon!</h2>
           </div>
         </div>
       </section>
