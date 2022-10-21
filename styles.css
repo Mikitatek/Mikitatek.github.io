@@ -19,7 +19,7 @@ h1 {
 
 /* NAV BAR AND HEADER SECTION */
 
-nav {
+#navbar {
   width: 100vw;
   height: 70px;
   position: fixed;
@@ -30,14 +30,14 @@ nav {
   justify-content: center;
 }
 
-nav a {
+#navbar a {
   padding: 23px 30px;
   text-decoration: none;
   color: black;
   transition: all ease-in-out 0.5s;
 }
 
-nav a:hover {
+#navbar a:hover {
   padding: 23px 50px;
   color: white;
   background-color: rgb(145, 28, 28);
@@ -46,7 +46,7 @@ nav a:hover {
 
 /* main section */
 
-#introduction {
+#welcome-section {
   background: linear-gradient(45deg, white, rgb(196, 196, 196));
   height: 100vh;
   width: 100vw;
@@ -62,17 +62,17 @@ nav a:hover {
   filter: grayscale(0.5);
 }
 
-#introduction h1 {
+#welcome-section h1 {
   font-family: "Poppins", bold, sans-serif;
   line-height: 1em;
 }
 
-#introduction h2 {
+#welcome-section h2 {
   margin: 0 0 0 15px;
   font-weight: 100;
 }
 
-#introduction p {
+#welcome-section p {
   width: 80%;
   margin-top: 10px;
 }
@@ -103,7 +103,7 @@ nav a:hover {
   margin: auto;
   height: 75%;
   overflow: hidden;
-  background: url(img/aboutmepic.jpeg);
+  background: url("https://i.ibb.co/SfJ9hTM/aboutmepic.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -188,7 +188,7 @@ nav a:hover {
 
 /* SOCIAL MEDIA */
 
-#social-media {
+#profile-links {
   width: 100vw;
   height: 200px;
   background-color: var(--color1);
@@ -197,7 +197,7 @@ nav a:hover {
   justify-content: center;
 }
 
-#social-media li {
+#profile-links li {
   list-style: none;
   display: inline;
   font-size: 50px;
@@ -205,12 +205,12 @@ nav a:hover {
   transition: all ease-in-out 0.1s;
 }
 
-#social-media li:hover {
+#profile-links li:hover {
   font-size: 60px;
   transition: all ease-in-out 0.1s;
 }
 
-#social-media h2 {
+#profile-links h2 {
   margin-right: 30px;
 }
 
@@ -222,13 +222,13 @@ nav a:hover {
 /* Media optimizations for mobile and others */
 
 @media screen and (max-width: 900px) {
-  nav a {
+  #navbar a {
     padding: 23px 10px;
   }
-  nav a:hover {
+  #navbar a:hover {
     padding: 23px 10px;
   }
-  #introduction {
+  #welcome-section {
     flex-direction: column-reverse;
     padding-top: 130px;
     overflow: hidden;
@@ -264,17 +264,17 @@ nav a:hover {
   .project-tile {
     width: 95%;
   }
-  #social-media {
+  #profile-links {
     flex-direction: column;
   }
-  #social-media h2 {
+  #profile-links h2 {
     font-size: 20px;
     margin: auto;
   }
-  #social-media li {
+  #profile-links li {
     margin: 10px;
   }
-  #social-media li:hover {
+  #profile-links li:hover {
     font-size: 50px;
   }
 }
