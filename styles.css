@@ -58,7 +58,6 @@ h1 {
 
 #person-pic {
   width: 50%;
-  aspect-ratio: initial;
   filter: grayscale(0.5);
 }
 
@@ -110,6 +109,32 @@ h1 {
 
 .text-container p {
   padding: 0 30px;
+}
+
+/* COURSES AND EXPERIENCES */
+
+#courses-and-experience {
+  width: 100vw;
+  height: 300px;
+  background-color: var(--color1);
+  display: flex;
+  text-align: center;
+}
+
+#courses-and-experience h1 {
+  font-size: 40px;
+}
+
+#courses-and-experience li {
+  font-size: 16px;
+  margin: auto 30px;
+}
+
+.text-container2 {
+  width: 45%;
+  margin: auto;
+  height: 75%;
+  background-color: #dd5353;
 }
 
 /* Projects section */

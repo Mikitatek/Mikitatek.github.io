@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.tage {
+  width: 100vw;
+  height: 1100px;
+  background: url(https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-size: cover;
+  padding-top: 20px;
+}
+
+.mahlzeit {
+  padding: 30px;
+  width: 600px;
+  height: 250px;
+  background-color: rgb(255, 255, 255);
+  margin: 20px auto;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 3px 3px rgb(175, 175, 175);
+}
+
+img {
+  float: left;
+  width: 220px;
+  aspect-ratio: 1/1;
+  margin: auto 0;
+  border-radius: 20px;
+}
+
+.mahl-titel {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.mahl-description {
+  text-align: center;
+  height: 200px;
+  margin: 0;
+  position: absolute;
+  width: 50%;
+  right: 5%;
+  top: 40%;
+}
+
+h2 {
+  float: right;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
