@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.postcard-container {
+  width: 900px;
+  margin: auto;
+  border: 1px solid black;
+  margin-top: 20px;
+  padding: 5px;
+  height: 630px;
+}
+
+.fata {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img {
+  margin: 5px auto;
+  height: 300px;
+  object-fit: cover;
+}
+
+#poza-brasov {
+  width: 260px;
+}
+
+#cetatea-brasov {
+  width: 402px;
+}
+
+.spate {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.spate div {
+  width: 50%;
+  height: 100%;
+}
+
+h3 {
+  margin: 15px 0 0 15px;
+  font-size: 30spx;
+}
+
+.stanga {
+  border-right: 5px solid black;
+}
+
+hr {
+  border: 0;
+  border-bottom: 2px solid black;
+  margin-right: 20px;
+  margin-left: 10px;
+  padding-top: 40px;
+}
+
+.stanga hr:nth-of-type(4) {
+  position: relative;
+}
+
+.stanga hr:nth-of-type(5) {
+  width: 20%;
+  position: relative;
+}
+
+.stanga hr:nth-of-type(6) {
+  width: 70%;
+  float: right;
+  margin-top: -50px;
+}
+
+.text {
+  position: absolute;
+  font-size: 12px;
+  margin-top: -7px;
+  margin-left: 10px;
+}
+
+.ort {
+  margin-left: 115px;
+}
+
+#image-box {
+  width: 100px;
+  height: 130px;
+  border: 1px solid black;
+  margin: 20px 20px 0 0;
+  float: right;
+}
+
+.dreapta {
+  position: relative;
+}
+
+#text-box {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  left: 0;
+}
+
+.dreapta hr:nth-of-type(3) {
+  position: relative;
+}
+
+.dreapta hr:nth-of-type(4) {
+  width: 20%;
+  position: relative;
+}
+
+.dreapta hr:nth-of-type(5) {
+  width: 70%;
+  float: right;
+  margin-top: -50px;
+}

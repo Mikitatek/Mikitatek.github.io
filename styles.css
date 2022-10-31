@@ -140,7 +140,7 @@ h1 {
 /* Projects section */
 
 #projects {
-  height: 100vh;
+  height: 130vh;
   width: 100vw;
 }
 
@@ -160,7 +160,7 @@ h1 {
 }
 
 .project-tile {
-  margin: 0 10px;
+  margin: 10px;
   width: 30%;
   height: 250px;
   background-color: white;
